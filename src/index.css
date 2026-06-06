@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  border-radius: 0 !important;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0A0E14;
+  color: #F7FAFC;
+  font-family: 'Hanken Grotesk', sans-serif;
+  margin: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #0A0E14; }
+::-webkit-scrollbar-thumb { background: #2D3748; }
+::-webkit-scrollbar-thumb:hover { background: #00F0FF; }
+
+@layer utilities {
+  .glow-blue  { box-shadow: 0 0 16px rgba(0, 240, 255, 0.25); }
+  .glow-green { box-shadow: 0 0 16px rgba(57, 255, 20, 0.25); }
+  .glow-red   { box-shadow: 0 0 16px rgba(255, 49, 49, 0.25); }
+  .font-mono  { font-family: 'JetBrains Mono', monospace; }
+}
+
+/* Pulsing live dot */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+.live-dot { animation: pulse-dot 1.4s ease-in-out infinite; }
